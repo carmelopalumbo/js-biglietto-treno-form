@@ -2,4 +2,30 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #212121;
+}
+
+.cp-container{
+    width: 1200px;
+    height: 600px;
+    background-color: #5D76A9;
+    border-radius: 10px;
+    margin: 100px auto;
+    box-shadow: 5px 2px 15px 5px rgba(255, 255, 255, .4);
+}
+
+main ul{
+    list-style: none;
+}
+
+._layer{
+    background-color: #0e2657;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+button{
+    border: 3px dotted #0e2657;
+    color: #0e2657;
+    font-weight: bold;
 }
