@@ -7,9 +7,15 @@ let nomeCognome;
 let kmRequest;
 let fasciaEta;
 const btnInput = document.getElementById('genera');
+const btnReset = document.getElementById('annulla');
+const minCarrozza = 1;
+const maxCarrozza = 9;
+const minCP = 10000;
+const maxCP = 99999;
 
 let calcolaSconto;
 let prezzoFinale;
+
 
 btnInput.addEventListener('click',function(){
 
@@ -49,4 +55,19 @@ btnInput.addEventListener('click',function(){
         prezzoFinale = kmRequest * costoalKm;
         document.getElementById('costobiglietto').innerHTML = `${prezzoFinale.toFixed(2)}€`;
     }
+
+    document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * (maxCarrozza - minCarrozza + 1) + minCarrozza);
+
+    document.getElementById('cpcode').innerHTML = Math.floor(Math.random() * (maxCP - minCP + 1) + minCP);
     });
+
+btnReset.addEventListener('click', function(){
+    document.getElementById('nomecognome').value = '';
+    document.getElementById('kmpercorsi').value = '';
+    document.getElementById('fasciaeta').value = 'none';
+    document.getElementById('nomecognometot').innerHTML = '-';
+    document.getElementById('dirittosconto').innerHTML = '-';
+    document.getElementById('carrozza').innerHTML = '-';
+    document.getElementById('cpcode').innerHTML = '-';
+    document.getElementById('costobiglietto').innerHTML = '-';
+})
