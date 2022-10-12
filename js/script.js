@@ -19,18 +19,19 @@ let prezzoFinale;
 
 btnInput.addEventListener('click',function(){
 
-    nomeCognome = prompt('Scrivi il tuo Nome e Cognome.');
-    kmRequest = parseInt(prompt('Quanti km devi percorrere?'));
-    fasciaEta = parseInt(prompt('Quanti anni hai?'));
+    // nomeCognome = prompt('Scrivi il tuo Nome e Cognome.');
+    // kmRequest = parseInt(prompt('Quanti km devi percorrere?'));
+    // fasciaEta = parseInt(prompt('Quanti anni hai?'));
 
     // FIRST CARD
 
-    document.getElementById('nomecognome').value = nomeCognome;
-    document.getElementById('kmpercorsi').value = kmRequest;
+    nomeCognome = document.getElementById('nomecognome').value;
+    kmRequest = document.getElementById('kmpercorsi').value;
+    fasciaEta = document.getElementById('fasciaeta').value; 
 
-    if(fasciaEta < 18){
+    if(fasciaEta === 'minorenne'){
         document.getElementById('fasciaeta').value = 'minorenne';
-    }else if(fasciaEta >= 65){
+    }else if(fasciaEta === 'over-65'){
         document.getElementById('fasciaeta').value = 'over-65';
     }else{
         document.getElementById('fasciaeta').value = 'maggiorenne';
