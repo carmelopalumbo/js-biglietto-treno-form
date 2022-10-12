@@ -44,22 +44,24 @@ btnInput.addEventListener('click',function(){
         document.getElementById('dirittosconto').innerHTML = '20% di Sconto';
         calcolaSconto = (kmRequest * costoalKm * 20) / 100;
         prezzoFinale = (kmRequest * costoalKm) - calcolaSconto;
-        document.getElementById('costobiglietto').innerHTML = `${prezzoFinale.toFixed(2)}€`;
     }else if(fasciaEta >= 65){
         document.getElementById('dirittosconto').innerHTML = '40% di Sconto';
         calcolaSconto = (kmRequest * costoalKm * 40) / 100;
         prezzoFinale = (kmRequest * costoalKm) - calcolaSconto;
-        document.getElementById('costobiglietto').innerHTML = `${prezzoFinale.toFixed(2)}€`;
     }else{
         document.getElementById('dirittosconto').innerHTML = 'Biglietto Standard';
         prezzoFinale = kmRequest * costoalKm;
-        document.getElementById('costobiglietto').innerHTML = `${prezzoFinale.toFixed(2)}€`;
     }
+
+    document.getElementById('costobiglietto').innerHTML = `${prezzoFinale.toFixed(2)}€`;
 
     document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * (maxCarrozza - minCarrozza + 1) + minCarrozza);
 
     document.getElementById('cpcode').innerHTML = Math.floor(Math.random() * (maxCP - minCP + 1) + minCP);
     });
+
+
+// RESET
 
 btnReset.addEventListener('click', function(){
     document.getElementById('nomecognome').value = '';
