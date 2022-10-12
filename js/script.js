@@ -55,7 +55,7 @@ btnInput.addEventListener('click',function(){
 btnReset.addEventListener('click', function(){
     document.getElementById('nomecognome').value = '';
     document.getElementById('kmpercorsi').value = '';
-    document.getElementById('fasciaeta').value = 'none';
+    document.getElementById('fasciaeta').value = '';
     document.getElementById('nomecognometot').innerHTML = '-';
     document.getElementById('dirittosconto').innerHTML = '-';
     document.getElementById('carrozza').innerHTML = '-';
