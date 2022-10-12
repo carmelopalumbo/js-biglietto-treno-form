@@ -29,23 +29,23 @@ btnInput.addEventListener('click',function(){
     kmRequest = document.getElementById('kmpercorsi').value;
     fasciaEta = document.getElementById('fasciaeta').value; 
 
-    if(fasciaEta === 'minorenne'){
-        document.getElementById('fasciaeta').value = 'minorenne';
-    }else if(fasciaEta === 'over-65'){
-        document.getElementById('fasciaeta').value = 'over-65';
-    }else{
-        document.getElementById('fasciaeta').value = 'maggiorenne';
-    }
+    // if(fasciaEta === 'minorenne'){
+    //     document.getElementById('fasciaeta').value = 'minorenne';
+    // }else if(fasciaEta === 'over-65'){
+    //     document.getElementById('fasciaeta').value = 'over-65';
+    // }else{
+    //     document.getElementById('fasciaeta').value = 'maggiorenne';
+    // }
 
     // SECOND CARD
 
     document.getElementById('nomecognometot').innerHTML = nomeCognome;
 
-    if(fasciaEta < 18){
+    if(fasciaEta === 'minorenne'){
         document.getElementById('dirittosconto').innerHTML = '20% di Sconto';
         calcolaSconto = (kmRequest * costoalKm * 20) / 100;
         prezzoFinale = (kmRequest * costoalKm) - calcolaSconto;
-    }else if(fasciaEta >= 65){
+    }else if(fasciaEta === 'over-65'){
         document.getElementById('dirittosconto').innerHTML = '40% di Sconto';
         calcolaSconto = (kmRequest * costoalKm * 40) / 100;
         prezzoFinale = (kmRequest * costoalKm) - calcolaSconto;
